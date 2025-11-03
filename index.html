@@ -23,7 +23,10 @@
         body.dark-mode .header,
         body.dark-mode .hero,
         body.dark-mode .services,
-        body.dark-mode .support { background-color: #2c2c2c; }
+        body.dark-mode .support,
+        body.dark-mode .contact,
+        body.dark-mode .social-media,
+        body.dark-mode .payments { background-color: #2c2c2c; }
         body.dark-mode .logo-nav-container,
         body.dark-mode .footer { background-color: #333; }
         body.dark-mode .contact-bar a,
@@ -65,6 +68,24 @@
             touch-action: manipulation;
         }
         .theme-toggle img { width: 28px; height: 28px; }
+
+        /* شريط التنقل العلوي */
+        .top-nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-left: auto;
+        }
+        .top-nav a {
+            color: #0045a0;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        body.dark-mode .top-nav a { color: #f5f5f5; }
         .hero { background-color: #f0f0f0; padding: 20px 5%; text-align: center; }
         .hero-content {
             display: flex;
@@ -104,6 +125,8 @@
             touch-action: manipulation;
         }
         .services { padding: 30px 5%; text-align: center; }
+        /* قسم التواصل وقسم السوشيال ميديا */
+        .contact, .social-media, .payments { padding: 30px 5%; text-align: center; background-color: white; }
         .section-title {
             color: #0045a0;
             font-size: 1.8rem;
@@ -209,6 +232,42 @@
             border-radius: 10px;
             touch-action: manipulation;
         }
+
+        /* روابط السوشيال ميديا */
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .social-media-links a {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        body.dark-mode .social-media-links a { background-color: #2980b9; }
+
+        /* روابط الدفع */
+        .payment-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .payment-links a {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        body.dark-mode .payment-links a { background-color: #149e50; }
         .footer { background-color: #0045a0; color: white; padding: 15px 5%; text-align: center; }
         .footer-logo img { max-width: 100px; width: 100px; height: 50px; margin-bottom: 12px; }
         .copyright { margin-top: 12px; font-size: 0.8rem; }
@@ -286,6 +345,14 @@
             <button aria-label='تبديل الوضع الليلي والنهاري' class='theme-toggle'>
                 <img alt='أيقونة الوضع الليلي' height='28' id='theme-icon' loading='lazy' src='https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png' width='28'/>
             </button>
+
+            <!-- Navigation links to jump to different sections -->
+            <nav class='top-nav'>
+                <a href='#packages'>الباقات</a>
+                <a href='#contact'>التواصل</a>
+                <a href='#social'>السوشيال ميديا</a>
+                <a href='#payments'>روابط الدفع</a>
+            </nav>
         </div>
     </header>
 
@@ -336,8 +403,8 @@
     </div>
 
     <!-- Services Section as Accordion with Package Details -->
-    <section class='services'>
-        <h2 class='section-title'>خدماتنا وخطط الأسعار</h2>
+    <section id='packages' class='services'>
+        <h2 class='section-title'>الباقات</h2>
         <div class='accordion-container'>
 
             <!-- Vodafone Flex Packages -->
@@ -422,6 +489,38 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id='contact' class='contact'>
+        <h2 class='section-title'>التواصل</h2>
+        <p>للتواصل معنا، يمكنك الاتصال بنا على الرقم التالي:</p>
+        <a class='phone-number' href='tel:+201000091627'>+201000091627</a>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id='social' class='social-media'>
+        <h2 class='section-title'>روابط السوشيال ميديا</h2>
+        <div class='social-media-links'>
+            <!-- يمكنك تعديل الروابط أدناه لتشير إلى حساباتك على السوشيال ميديا -->
+            <a href='https://www.facebook.com/share/15ziHbjDAR/'>فيسبوك</a>
+            <a href='https://chat.whatsapp.com/IfeI4WYS5IDCThrYM9YfUU'>واتساب</a>
+            
+        </div>
+    </section>
+
+    <!-- Payment Links Section -->
+    <section id='payments' class='payments'>
+        <h2 class='section-title'>روابط الدفع</h2>
+        <div class='payment-links'>
+            <!-- عدل الروابط لتشير إلى صفحات الدفع الخاصة بك -->
+            <a href='#' data-number='01097330680'>دفع عبر انستاباي 1</a>
+            <a href='#' data-number='01000091627'>دفع عبر انستاباي 2</a>
+            <a href='#' data-number='01097330680'>دفع عبر فودافون كاش</a>
+            <a href='#' data-number='01555542559'>دفع عبر أكسس باي</a>
+            <a href='#' data-number='01116532228'>دفع عبر اتصالات كاش</a>
+
+        </div>
+    </section>
+
     <!-- Support Section -->
     <section class='support'>
         <h2 class='section-title'>تحتاج مساعدة 24/7؟</h2>
@@ -500,6 +599,21 @@
         });
         document.getElementById('close-popup').addEventListener('click', function() {
             document.getElementById('popup-modal').style.display = 'none';
+        });
+
+        // Payment links copy number Script
+        document.querySelectorAll('.payment-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const number = this.getAttribute('data-number');
+                if (number && navigator.clipboard) {
+                    navigator.clipboard.writeText(number).then(() => {
+                        alert('تم نسخ رقم الدفع إلى الحافظة: ' + number);
+                    }).catch(err => {
+                        console.error('Clipboard copy failed', err);
+                    });
+                }
+            });
         });
     </script>
 </body>
