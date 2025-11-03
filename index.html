@@ -1,175 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir='rtl' lang='ar' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="الحماقي للباقات والإنترنت يقدم أفضل عروض باقات الإنترنت والاتصالات في مصر، بما في ذلك أنظمة إيمريلد ووي جولد وأورنج بريمير." />
-  <meta name="keywords" content="باقات الإنترنت, فودافون, أورنج, وي, اتصالات, الحماقي, الإنترنت في مصر" />
-  <meta name="author" content="الحماقي للباقات والإنترنت" />
-  <meta property="og:title" content="الحماقي للباقات والإنترنت" />
-  <meta property="og:description" content="أفضل باقات الإنترنت والاتصالات في مصر." />
-  <meta property="og:image" content="https://i.postimg.cc/CMWc834w/01.jpg" />
-  <meta property="og:type" content="website" />
-  <meta name="robots" content="index, follow" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data:;" />
-  <title>الحماقي للباقات والإنترنت – أفضل الباقات والعروض</title>
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/CMWc834w/01.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@700&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'El Messiri', sans-serif;
-      background: linear-gradient(180deg, #f9f9f9 0%, #f0f0f0 100%);
-      color: #333;
-      direction: rtl;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    body.dark-mode { background: #1a1a1a; color: #f5f5f5; }
-    header, .hero, .services, .support, footer {
-      animation: fadeIn 0.7s ease-in-out both;
-    }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .header { background-color: #e6e6e6; padding: 10px 0; }
-    .contact-bar { text-align: center; padding: 8px 0; }
-    .contact-bar a {
-      background-color: #4CAF50; color: white; padding: 10px 20px;
-      text-decoration: none; border-radius: 5px; font-weight: bold;
-    }
-    .logo-nav-container {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 10px 5%; background-color: white; flex-wrap: wrap;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .logo img { max-height: 60px; width: 100px; }
-    .theme-toggle { background: none; border: none; cursor: pointer; }
-    .theme-toggle img { width: 28px; height: 28px; }
-    .hero { background-color: #fff; padding: 20px 5%; text-align: center; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
-    .hero-text h1 { color: #c0392b; font-family: 'Lemonada', cursive; font-size: 2rem; margin-bottom: 10px; }
-    .cta-button {
-      display: inline-block; background-color: #c0392b; color: white; padding: 10px 22px;
-      text-decoration: none; border-radius: 6px; font-weight: bold; margin-top: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .cta-button:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-    .accordion-item {
-      border-radius: 10px; margin: 10px auto; max-width: 900px;
-      background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      overflow: hidden; transition: all 0.3s;
-    }
-    .accordion-header {
-      background: #0045a0; color: white; padding: 14px 20px;
-      font-size: 1.1rem; cursor: pointer; border: none;
-      text-align: right; display: flex; align-items: center; gap: 10px;
-    }
-    .accordion-content { display: none; padding: 15px; text-align: right; }
-    .accordion-content.active { display: block; animation: fadeIn 0.4s; }
-    .phone-number {
-      display: inline-block; background-color: #fff9e6; border: 2px solid #f39c12;
-      border-radius: 10px; color: #c0392b; padding: 10px 20px; font-size: 1.4rem;
-      margin-top: 10px; transition: transform 0.2s;
-    }
-    .phone-number:hover { transform: scale(1.05); }
-    footer { background-color: #0045a0; color: white; padding: 15px 5%; text-align: center; }
-    footer p { margin-top: 8px; font-size: 0.9rem; }
-    .whatsapp-button {
-      position: fixed; bottom: 80px; left: 15px; z-index: 1000;
-      animation: fadeIn 1s ease-in-out both;
-    }
-    .whatsapp-button a {
-      display: flex; align-items: center; background-color: white; color: #333;
-      padding: 10px 15px; border-radius: 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-      font-size: 0.9rem; text-decoration: none;
-    }
-    .back-to-top {
-      position: fixed; bottom: 15px; right: 15px; width: 40px; height: 40px;
-      background: #fff; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2); cursor: pointer; font-size: 20px; color: #0045a0;
-    }
-    @media (max-width: 768px) {
-      .hero-text h1 { font-size: 1.6rem; }
-      .phone-number { font-size: 1.2rem; }
-    }
-  </style>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+    <meta content='الحماقى للباقات والإنترنت يقدم أفضل عروض باقات الإنترنت والاتصالات في مصر، بما في ذلك أنظمة إيمريلد ووي جولد وأورنج بريمير.' name='description'/>
+    <title>الحماقى للباقات والانترنت – أفضل الباقات والعروض</title>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css2?family=Lemonada:wght@700&amp;family=El+Messiri:wght@400;700&amp;display=swap' rel='stylesheet'/>
+    <!-- Custom CSS inline via Blogger skin -->
+    <style>
+        /* تصميم CSS كما هو */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'El Messiri', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            direction: rtl;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode { background-color: #1a1a1a; color: #f5f5f5; }
+        body.dark-mode .header,
+        body.dark-mode .hero,
+        body.dark-mode .services,
+        body.dark-mode .support { background-color: #2c2c2c; }
+        body.dark-mode .logo-nav-container,
+        body.dark-mode .footer { background-color: #333; }
+        body.dark-mode .contact-bar a,
+        body.dark-mode .cta-button,
+        body.dark-mode .package-button,
+        body.dark-mode .more-details-button,
+        body.dark-mode .support-button { background-color: #3498db; }
+        body.dark-mode .phone-number { background-color: #444; border-color: #f39c12; }
+        body.dark-mode .hero-text h1 { color: #e74c3c; }
+        body.dark-mode .section-title { color: #3498db; }
+        .header { background-color: #e6e6e6; padding: 10px 0; position: relative; }
+        .contact-bar { text-align: center; padding: 8px 0; }
+        .contact-bar a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        .logo-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: white;
+            flex-wrap: wrap;
+        }
+        .logo img { max-height: 60px; width: 100px; height: auto; }
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            touch-action: manipulation;
+        }
+        .theme-toggle img { width: 28px; height: 28px; }
+        .hero { background-color: #f0f0f0; padding: 20px 5%; text-align: center; }
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .hero-text { flex: 1; text-align: right; min-width: 280px; }
+        .hero-text h1 {
+            color: #c0392b;
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            font-family: 'Lemonada', cursive;
+        }
+        .hero-text p { font-size: 1rem; margin-bottom: 8px; color: #0045a0; }
+        .hero-image { flex: 1; text-align: center; min-width: 280px; }
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #c0392b;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 12px;
+            font-size: 1rem;
+            touch-action: manipulation;
+        }
+        .services { padding: 30px 5%; text-align: center; }
+        .section-title {
+            color: #0045a0;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            font-family: 'Lemonada', cursive;
+        }
+        .accordion-container { max-width: 900px; margin: 0 auto; }
+        .accordion-item { border-radius:10px; margin-bottom: 10px; background: #f9f9f9; box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+        .accordion-header {
+            width: 100%;
+            text-align: right;
+            padding: 16px 20px;
+            font-size: 1.15rem;
+            background: #0045a0;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius:10px;
+            transition: background 0.2s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+        }
+        .accordion-header[aria-expanded="true"] { background: #c0392b; }
+        .accordion-content { display: none; padding: 18px 18px 8px 18px; }
+        .accordion-content.active { display: block; animation: fadeIn 0.4s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .preview-packages-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .preview-package-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 12px;
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .preview-package-card h4 { color: #c0392b; margin-bottom: 8px; font-size: 1.1rem; }
+        .preview-package-price {
+            font-size: 1.4rem;
+            color: #0045a0;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .preview-package-details { margin: 10px 0; font-size: 0.9rem; }
+        .package-button {
+            display: inline-block;
+            background-color: #c0392b;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            touch-action: manipulation;
+            margin-top: 8px;
+            min-width: 150px;
+        }
+        .package-button.green { background-color: #27ae60; }
+        .package-button.blue { background-color: #2980b9; }
+        .package-button.purple { background-color: #8e44ad; }
+        .more-details { text-align: center; margin-top: 15px; }
+        .more-details-button {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            touch-action: manipulation;
+        }
+        .support { padding: 30px 5%; text-align: center; background-color: white; }
+        .support-button {
+            display: inline-block;
+            background-color: #0045a0;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            touch-action: manipulation;
+        }
+        .phone-number {
+            display: block;
+            background-color: #fff9e6;
+            color: #c0392b;
+            font-size: 1.6rem;
+            font-weight: bold;
+            padding: 10px;
+            margin: 12px auto;
+            max-width: 90%;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            touch-action: manipulation;
+        }
+        .footer { background-color: #0045a0; color: white; padding: 15px 5%; text-align: center; }
+        .footer-logo img { max-width: 100px; width: 100px; height: 50px; margin-bottom: 12px; }
+        .copyright { margin-top: 12px; font-size: 0.8rem; }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 80px;
+            left: 15px;
+            z-index: 1000;
+        }
+        .whatsapp-button a {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            font-size: 0.9rem;
+            touch-action: manipulation;
+        }
+        .whatsapp-button img { width: 32px; height: 32px; margin-left: 8px; }
+        .back-to-top {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+            touch-action: manipulation;
+        }
+        .back-to-top span { color: #0045a0; font-size: 20px; font-weight: bold; }
+        @media (max-width: 768px) {
+            .header { padding: 5px 0; }
+            .logo-nav-container { flex-direction: column; align-items: center; padding: 8px 3%; }
+            .logo img { max-height: 50px; width: 80px; }
+            .hero-content { flex-direction: column; gap: 15px; }
+            .hero-text, .hero-image { text-align: center; min-width: 100%; }
+            .hero-text h1 { font-size: 1.8rem; }
+            .hero-text p { font-size: 0.95rem; }
+            .accordion-content { padding: 12px; }
+            .section-title { font-size: 1.6rem; }
+            .phone-number { font-size: 1.4rem; max-width: 95%; }
+            .cta-button, .package-button, .more-details-button, .support-button { padding: 10px 16px; font-size: 0.9rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-text h1 { font-size: 1.6rem; }
+            .hero-text p { font-size: 0.85rem; }
+            .section-title { font-size: 1.4rem; }
+            .phone-number { font-size: 1.2rem; padding: 8px; }
+            .whatsapp-button a { font-size: 0.85rem; padding: 8px 12px; }
+            .whatsapp-button img { width: 28px; height: 28px; }
+            .back-to-top { width: 36px; height: 36px; }
+            .back-to-top span { font-size: 18px; }
+        }
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="contact-bar">
-      <a href="tel:+201000091627">اتصل بنا: +201000091627</a>
-    </div>
-    <div class="logo-nav-container">
-      <div class="logo"><a href="/"><img src="https://i.postimg.cc/CMWc834w/01.jpg" alt="شعار الحماقي" /></a></div>
-      <button class="theme-toggle" aria-label="تبديل الوضع"><img id="theme-icon" src="https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png" alt="الوضع الليلي"></button>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class='header'>
+        <div class='contact-bar'>
+            <a aria-label='اتصل بنا' href='tel:+201000091627'>اتصل بنا: +201000091627</a>
+        </div>
+        <div class='logo-nav-container'>
+            <div class='logo'>
+                <a href='/'><img alt='شعار الحماقى للباقات والإنترنت' height='60' loading='lazy' src='https://i.postimg.cc/CMWc834w/01.jpg' width='100'/></a>
+            </div>
+            <button aria-label='تبديل الوضع الليلي والنهاري' class='theme-toggle'>
+                <img alt='أيقونة الوضع الليلي' height='28' id='theme-icon' loading='lazy' src='https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png' width='28'/>
+            </button>
+        </div>
+    </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>الحماقي للباقات والإنترنت في مصر</h1>
-      <p>أفضل عروض فودافون، أورنج، وي، واتصالات</p>
-      <a class="cta-button" href="#services">خدماتنا</a>
+    <!-- Hero Section -->
+    <section class='hero'>
+        <div class='hero-content'>
+            <div class='hero-text'>
+                <h1> الحماقى للباقات والانترنت فى مصر</h1>
+                <p>أنظمة إيمريلد من إتصالات</p>
+                <p>أورنج بريمير</p>
+                <p>أنظمة وي جولد</p>
+                <p>فودافون </p>
+                <p>٢٤/٧ دعم كامل</p>
+                <a aria-label='ابدأ الآن' class='cta-button' href='#' id='open-popup'>خدماتنا</a>
+            </div>
+            <div class='hero-image'>
+                <img alt='صورة توضيحية' height='200' loading='lazy' src='https://i.postimg.cc/CMWc834w/01.jpg' width='300'/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id='popup-modal' style='display:none; position:fixed; top:0; right:0; left:0; bottom:0; background:rgba(0,0,0,0.5); z-index:2000; justify-content:center; align-items:center;'>
+      <div style='background:#fff; border-radius:12px; padding:30px 15px; max-width:350px; margin:auto; text-align:right; position:relative; box-shadow:0 4px 24px rgba(0,0,0,0.13)'>
+        <div style='font-size:1.2rem; color:#c0392b; font-weight:bold; margin-bottom:10px;'>الحماقى للباقات والانترنت فى مصر</div>
+        <div style='margin-bottom:10px;'>اليكم خدماتنا ❤</div>
+        <div style='margin-bottom:5px;'>متاح باقات فودافون ❤</div>
+        <div style='margin-bottom:5px;'>متاح باقات اورانج🧡</div>
+        <div style='margin-bottom:5px;'>باقات اتصالات 💙</div>
+        <div style='margin-bottom:5px;'>باقات وي 💜</div>
+        <hr style='margin:10px 0;'/>
+        <div style='margin-bottom:5px;'>تسجيل خطوط اورانج 🍊</div>
+        <div style='margin-bottom:5px;'>تسجيل  خطوط فودافون 🔴</div>
+        <div style='margin-bottom:5px;'>تسجيل خطوط اتصالات 💙</div>
+        <hr style='margin:10px 0;'/>
+        <div style='margin-bottom:5px;'>خطوط فودافون مميزه ❤</div>
+        <div style='margin-bottom:5px;'>خطوط اورانج مميزه 🧡</div>
+        <div style='margin-bottom:5px;'>خطوط اتصالات  💙</div>
+        <div style='margin-bottom:5px;'>خطوط وي we💜</div>
+        <hr style='margin:10px 0;'/>
+        <div style='margin-bottom:5px;'>فتح محافظ فودافون 💸</div>
+        <div style='margin-bottom:5px;'>فتح محافظ اورانج 💵</div>
+        <div style='margin-bottom:5px;'>فتح محافظ اتصالات 💴</div>
+        <hr style='margin:10px 0;'/>
+        <div style='margin-bottom:13px;'>متاح خدمه سحب بيانات اي📒 رقم  نصب عليك او عاملك مشاكل ✅</div>
+        <button id='close-popup' style='width:100%; background:#c0392b; color:#fff; border:none; border-radius:7px; padding:12px 0; font-size:1rem; font-weight:bold; cursor:pointer;'>تم</button>
+      </div>
     </div>
-  </section>
 
-  <section id="services" class="services">
-    <h2 class="section-title">خدماتنا</h2>
-    <div class="accordion-item">
-      <button class="accordion-header">باقات فودافون</button>
-      <div class="accordion-content"><p>أفضل باقات فليكس من فودافون بأسعار تنافسية.</p></div>
+    <!-- Services Section as Accordion with Package Details -->
+    <section class='services'>
+        <h2 class='section-title'>خدماتنا وخطط الأسعار</h2>
+        <div class='accordion-container'>
+
+            <!-- Vodafone Flex Packages -->
+            <div class='accordion-item'>
+                <button aria-expanded='false' class='accordion-header'>
+                    <img alt='شعار فودافون بيزنس' height='35' src='https://i.postimg.cc/JnK6HRJr/85175801230.png' style='vertical-align:middle;margin-left:10px;' width='35'/>
+                    باقات فودافون بيزنس
+                </button>
+                <div class='accordion-content'>
+                    <div style='text-align:right; margin-bottom:10px;'>
+                        <ul style='margin-right:18px;list-style:none;padding:0;'>
+                            <li>فليكس 70 <strong> 5000 فليكس +  2500 ميجا بسعر  130 ج</strong> — <span style='color:#c0392b;font-weight:bold;'/></li>
+                            <li>فليكس 100 <strong> 9000 فليكس +  2500 ميجا بسعر</strong> — <span style='color:#c0392b;font-weight:bold;'/></li>
+                            <li>فليكس 150 <strong> 13000 فليكس +  4000 ميجا بسعر   250 ج</strong> — <span style='color:#c0392b;font-weight:bold;'/></li>
+                        </ul>
+                        <a class='package-button green' href='https://wa.me/201000091627?text=أريد أحد عروض فليكسات فودافون' target='_blank'>اطلب الآن عبر واتساب</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orange Premier -->
+            <div class='accordion-item'>
+                <button aria-expanded='false' class='accordion-header'>
+                    <img alt='شعار أورنج بريمير' height='35' src='https://i.postimg.cc/0j20pg0P/download.png' style='vertical-align:middle;margin-left:10px;' width='35'/>
+                    أورنج بريمير
+                </button>
+                <div class='accordion-content'>
+                    <div class='preview-packages-container'>
+                        <div class='preview-package-card'><h4>باقة 1</h4><div class='preview-package-price'>230 جنيه / شهر</div><div class='preview-package-details'><p>10 جيجا نت</p><p>1000 دقيقة</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 1 بسعر 230 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 2</h4><div class='preview-package-price'>290 جنيه / شهر</div><div class='preview-package-details'><p>15 جيجا نت</p><p>1500 دقيقة</p></div><a class='package-button blue' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 2 بسعر 290 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 3</h4><div class='preview-package-price'>350 جنيه / شهر</div><div class='preview-package-details'><p>20 جيجا نت</p><p>2000 دقيقة</p></div><a class='package-button' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 3 بسعر 350 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 4</h4><div class='preview-package-price'>460 جنيه / شهر</div><div class='preview-package-details'><p>30 جيجا نت</p><p>2000 دقيقة</p></div><a class='package-button purple' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 4 بسعر 460 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 5</h4><div class='preview-package-price'>585 جنيه / شهر</div><div class='preview-package-details'><p>40 جيجا نت</p><p>2000 دقيقة</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 5 بسعر 585 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 6</h4><div class='preview-package-price'>680 جنيه / شهر</div><div class='preview-package-details'><p>50 جيجا نت</p><p>2000 دقيقة</p></div><a class='package-button blue' href='https://wa.me/201000091627?text=أريد باقة أورنج بريمير 6 بسعر 680 جنيه' target='_blank'>اطلب الآن</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WE Gold -->
+            <div class='accordion-item'>
+                <button aria-expanded='false' class='accordion-header'>
+                    <img alt='شعار WE Gold' height='35' src='https://i.postimg.cc/TPTVStS7/WE-Gold-Logo.png' style='vertical-align:middle;margin-left:10px;' width='35'/>
+                    أنظمة وي جولد
+                </button>
+                <div class='accordion-content'>
+                    <div class='preview-packages-container'>
+                        <div class='preview-package-card'><h4>باقة 1</h4><div class='preview-package-price'>130 جنيه / شهر</div><div class='preview-package-details'><p>5 جيجا نت</p><p>500 دقيقة لأي رقم</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة WE Gold 1 بسعر 130 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 2</h4><div class='preview-package-price'>190 جنيه / شهر</div><div class='preview-package-details'><p>10 جيجا نت</p><p>500 دقيقة لأي رقم</p></div><a class='package-button blue' href='https://wa.me/201000091627?text=أريد باقة WE Gold 2 بسعر 190 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 3</h4><div class='preview-package-price'>220 جنيه / شهر</div><div class='preview-package-details'><p>15 جيجا نت</p><p>750 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button' href='https://wa.me/201000091627?text=أريد باقة WE Gold 3 بسعر 220 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 4</h4><div class='preview-package-price'>260 جنيه / شهر</div><div class='preview-package-details'><p>20 جيجا نت</p><p>1000 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button purple' href='https://wa.me/201000091627?text=أريد باقة WE Gold 4 بسعر 260 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 5</h4><div class='preview-package-price'>340 جنيه / شهر</div><div class='preview-package-details'><p>30 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة WE Gold 5 بسعر 340 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 6</h4><div class='preview-package-price'>410 جنيه / شهر</div><div class='preview-package-details'><p>35 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button blue' href='https://wa.me/201000091627?text=أريد باقة WE Gold 6 بسعر 410 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 7</h4><div class='preview-package-price'>430 جنيه / شهر</div><div class='preview-package-details'><p>40 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button' href='https://wa.me/201000091627?text=أريد باقة WE Gold 7 بسعر 430 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 8</h4><div class='preview-package-price'>500 جنيه / شهر</div><div class='preview-package-details'><p>50 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button purple' href='https://wa.me/201000091627?text=أريد باقة WE Gold 8 بسعر 500 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 9</h4><div class='preview-package-price'>570 جنيه / شهر</div><div class='preview-package-details'><p>60 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة WE Gold 9 بسعر 570 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 10</h4><div class='preview-package-price'>650 جنيه / شهر</div><div class='preview-package-details'><p>70 جيجا نت</p><p>1500 دقيقة أو رسالة لأي رقم في مصر</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة WE Gold 10 بسعر 650 جنيه' target='_blank'>اطلب الآن</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emerald -->
+            <div class='accordion-item'>
+                <button aria-expanded='false' class='accordion-header'>
+                    <img alt='شعار إتصالات' height='35' src='https://i.postimg.cc/QNmGc3sW/51421528929.png' style='vertical-align:middle;margin-left:10px;' width='35'/>
+                    أنظمة إيمريلد
+                </button>
+                <div class='accordion-content'>
+                    <div class='preview-packages-container'>
+                        <div class='preview-package-card'><h4>باقة 1</h4><div class='preview-package-price'>270 جنيه / شهر</div><div class='preview-package-details'><p>14 جيجا نت</p><p>1000 دقيقة لأي رقم</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 1 بسعر 270 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 2</h4><div class='preview-package-price'>320 جنيه / شهر</div><div class='preview-package-details'><p>20 جيجا نت</p><p>1500 دقيقة لأي رقم</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 2 بسعر 320 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 3</h4><div class='preview-package-price'>390 جنيه / شهر</div><div class='preview-package-details'><p>30 جيجا نت</p><p>1500 دقيقة لأي رقم</p></div><a class='package-button blue' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 3 بسعر 390 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 4</h4><div class='preview-package-price'>430 جنيه / شهر</div><div class='preview-package-details'><p>40 جيجا نت</p><p>1700 دقيقة لأي رقم</p></div><a class='package-button' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 4 بسعر 430 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 5</h4><div class='preview-package-price'>530 جنيه / شهر</div><div class='preview-package-details'><p>50 جيجا نت</p><p>1700 دقيقة لأي رقم</p></div><a class='package-button purple' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 5 بسعر 530 جنيه' target='_blank'>اطلب الآن</a></div>
+                        <div class='preview-package-card'><h4>باقة 6</h4><div class='preview-package-price'>630 جنيه / شهر</div><div class='preview-package-details'><p>60 جيجا نت</p><p>2000 دقيقة لأي رقم</p></div><a class='package-button green' href='https://wa.me/201000091627?text=أريد باقة إيمريلد 6 بسعر 630 جنيه' target='_blank'>اطلب الآن</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class='more-details' style='margin-top:20px;'>
+            <a aria-label='طلب خطة مخصصة' class='more-details-button' href='https://wa.me/201000091627?text=اريد طلب خطة مخصصة'>هل تحتاج إلى خطة مخصصة؟ اطلب الآن</a>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class='support'>
+        <h2 class='section-title'>تحتاج مساعدة 24/7؟</h2>
+        <a aria-label='رقم الدعم الفني' class='phone-number' href='tel:+201000091627'>+201000091627</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class='footer'>
+        <!-- Placeholder for additional footer content -->
+        <div class='copyright'>© 2025 الحماقى للباقات والانترنت. كل الحقوق محفوظة.</div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div class='whatsapp-button'>
+        <a aria-label='تواصل عبر واتساب' href='https://wa.me/201000091627' target='_blank'>
+            <img alt='أيقونة واتساب' height='32' loading='lazy' src='https://i.postimg.cc/25qkzDPV/mobile-15047483.png' width='32'/>
+            كلمنا على الواتس
+        </a>
     </div>
-    <div class="accordion-item">
-      <button class="accordion-header">أنظمة وي جولد</button>
-      <div class="accordion-content"><p>أنظمة مميزة تناسب احتياجات الشركات والأفراد.</p></div>
-    </div>
-  </section>
 
-  <section class="support">
-    <h2>تحتاج مساعدة 24/7؟</h2>
-    <a href="tel:+201000091627" class="phone-number">+201000091627</a>
-  </section>
-
-  <footer>
-    <p>© 2025 الحماقي للباقات والإنترنت - جميع الحقوق محفوظة</p>
-  </footer>
-
-  <div class="whatsapp-button">
-    <a href="https://wa.me/201000091627" target="_blank">
-      <img src="https://i.postimg.cc/25qkzDPV/mobile-15047483.png" alt="واتساب" width="28" height="28" />
-      كلمنا على الواتس
+    <!-- Back to Top Button -->
+    <a aria-label='العودة إلى الأعلى' class='back-to-top' href='#'>
+        <span>↑</span>
     </a>
-  </div>
 
-  <div class="back-to-top" id="backToTop">↑</div>
+    <!-- Scripts -->
+    <script>
+        // Back to Top Script
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-  <script>
-    // Back to Top
-    document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        // Theme Toggle Script
+        const themeToggle = document.querySelector('.theme-toggle');
+        const themeIcon = document.querySelector('#theme-icon');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.src = 'https://i.postimg.cc/7ZBc8D5Q/sun_icon.png';
+            themeIcon.alt = 'أيقونة الوضع النهاري';
+        } else {
+            body.classList.remove('dark-mode');
+            themeIcon.src = 'https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png';
+            themeIcon.alt = 'أيقونة الوضع الليلي';
+        }
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                themeIcon.src = 'https://i.postimg.cc/7ZBc8D5Q/sun_icon.png';
+                themeIcon.alt = 'أيقونة الوضع النهاري';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.src = 'https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png';
+                themeIcon.alt = 'أيقونة الوضع الليلي';
+                localStorage.setItem('theme', 'light');
+            }
+        });
 
-    // Theme Toggle
-    const body = document.body, icon = document.getElementById('theme-icon');
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      icon.src = 'https://i.postimg.cc/7ZBc8D5Q/sun_icon.png';
-    }
-    document.querySelector('.theme-toggle').addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        icon.src = 'https://i.postimg.cc/7ZBc8D5Q/sun_icon.png';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        icon.src = 'https://i.postimg.cc/RVfw0rxp/half-moon-3600285.png';
-        localStorage.setItem('theme', 'light');
-      }
-    });
+        // Accordion Script
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                // Close all other accordions
+                document.querySelectorAll('.accordion-header').forEach(h => { h.setAttribute('aria-expanded', 'false'); });
+                document.querySelectorAll('.accordion-content').forEach(c => { c.classList.remove('active'); });
+                // Open the current one
+                this.setAttribute('aria-expanded', 'true');
+                this.nextElementSibling.classList.add('active');
+            });
+        });
 
-    // Accordion behavior
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        header.classList.toggle('active');
-        const content = header.nextElementSibling;
-        content.classList.toggle('active');
-      });
-    });
-  </script>
+        // Popup Script
+        document.getElementById('open-popup').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('popup-modal').style.display = 'flex';
+        });
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('popup-modal').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
